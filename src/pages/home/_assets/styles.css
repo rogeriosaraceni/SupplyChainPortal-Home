@@ -83,6 +83,21 @@ splide-banner
     background-color: var(--action-colors-defaul);
 }
 
+.splide__arrow {
+    background: 0;
+}
+.splide__arrow svg {
+    fill: #000;
+    height: 0.85rem;
+    width: 0.85rem;
+}
+.splide__arrow--prev {
+    left: -1.3rem;
+}
+.splide__arrow--next {
+    right: -1.3rem;
+}
+
 /* --------------------------------------------------------------------
 Support Links
 ---------------------------------------------------------------------- */
