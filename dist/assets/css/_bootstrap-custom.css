@@ -1,0 +1,23 @@
+:root{
+    --bs-border-radius: 0.5rem;
+}
+
+b, strong {
+    font-weight: 600;
+}
+.fw-bold {
+    font-weight: 600 !important;
+}
+
+.card{
+    border: 0;
+}    
+
+.btn{
+    border-radius: 4px;
+}
+
+.form-control,
+.form-select{
+    color: var(--neutral-colors-400);
+}

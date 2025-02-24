@@ -11,56 +11,31 @@ import ContentActivities from './_content-activities.astro';
 ---
 
 <Layout>
-    <div class="wrapper-app">
-        <Navbar />
-        <Sidebar />
+    <Navbar />
+    <Sidebar />
 
-        <!--  -->
-        <main class="mainApp">
-            <div class="main-home animate__animated animate__bounceInRight">
-                <ContentBreadcrumb />
-                <ContentInfoUser />
+    <section class="wrapperMainApp">
+        <main class="mainContentApp contentHome">
+            <ContentBreadcrumb />
+            <ContentInfoUser />
 
-                <section class="grid-banner-links">
-                    <ContentCarousel />
-                    <ContentLinks />
-                </section>
+            <section class="grid-banner-links">
+                <ContentCarousel />
+                <ContentLinks />
+            </section>
 
-                <ContentActivities />
-            </div>
+            <ContentActivities />
         </main>
 
         <Footer />
-    </div>
+    </section>
 </Layout>
 
-<style>
-    .wrapper-app{
-        min-height: 100vh;
-        display: grid;
-        grid-template-columns: 84px 1fr;
-        grid-template-rows: auto 1fr auto;
-        grid-template-areas:
-            "navbar navbar"
-            "sidebar main"
-            "sidebar footer";
-    }
-
-    .mainApp{
-        grid-area: main;
-        padding: 2rem;
-    }
-    .main-home{
+<style is:global>
+    .contentHome{
         width: 100%;
-        max-width: 85%;
+        max-width: 80%;
     }
-
-    @media(max-width: 992px) {
-        .main-home{
-            max-width: 100%;
-        }
-    }
-
     .grid-banner-links{
         display: grid;
         grid-template-columns: 2fr 1fr;

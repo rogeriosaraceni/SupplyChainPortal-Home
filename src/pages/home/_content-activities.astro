@@ -1,5 +1,122 @@
-<div class="item p-3 border rounded container-activities">
-    <p>
-        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-    </p>
+<div class="item p-3 border rounded">
+    <div class="mb-5">
+        <h4 class="mb-0">Main Activities</h4>
+        <span>Your essential tasks and resources in one place</span>
+    </div>
+
+    <section class="splide splide-default" id="splide-activities">
+        <div class="splide__track">
+            <ul class="splide__list">
+                <li class="splide__slide item border rounded">
+                    <a href="#">
+                        <div>
+                            <img class="mb-3" src="/assets/images/icons/activities/toolbox.svg">
+                            <h6>GOPS, Toolkits<br>and Checklists</h6>
+                        </div>
+
+                        <span class="text-neutral-colors-400">
+                            Check it now <i class="bi bi-chevron-right"></i>
+                        </span>
+                    </a>
+                </li>
+
+                <li class="splide__slide item border rounded">
+                    <a href="#">
+                        <div>
+                            <img class="mb-3" src="/assets/images/icons/activities/idea.svg">
+                            <h6>Ideas and Best<br>Practices</h6>
+                        </div>
+
+                        <span class="text-neutral-colors-400">
+                            Check it now <i class="bi bi-chevron-right"></i>
+                        </span>
+                    </a>
+                </li>
+
+                <li class="splide__slide item border rounded">
+                    <a href="#">
+                        <div>
+                            <img class="mb-3" src="/assets/images/icons/activities/book.svg">
+                            <h6>Go to the 2025<br>Handbooks</h6>
+                        </div>
+
+                        <span class="text-neutral-colors-400">
+                            Check it now <i class="bi bi-chevron-right"></i>
+                        </span>
+                    </a>
+                </li>
+
+                <li class="splide__slide item border rounded">
+                    <a href="#">
+                        <div>
+                            <img class="mb-3" src="/assets/images/icons/activities/chart.svg">
+                            <h6>Digital VPO<br>PowerBI</h6>
+                        </div>
+
+                        <span class="text-neutral-colors-400">
+                            Check it now <i class="bi bi-chevron-right"></i>
+                        </span>
+                    </a>
+                </li>
+
+                <li class="splide__slide item border rounded">
+                    <a href="#">
+                        <div>
+                            <img class="mb-3" src="/assets/images/icons/activities/ranking.svg">
+                            <h6>Supply Ranking<br>and Results</h6>
+                        </div>
+
+                        <span class="text-neutral-colors-400">
+                            Check it now <i class="bi bi-chevron-right"></i>
+                        </span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </section>
 </div>
+
+<style is:inline>
+    #splide-activities{
+        padding: 0 2rem;
+    }
+    .splide__slide.item {
+        height: 184px;
+    }
+    .splide__slide.item a {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+        padding: 1rem;
+        text-decoration: none;
+        color: var(--neutral-colors-600);
+    }
+    .splide__slide.item a:hover {
+        background-color: var(--action-colors-defaul);
+    }
+</style>
+
+<script is:inline>
+    addEventListener("load", () => {
+        new Splide("#splide-activities", {
+            type: "loop",
+            gap: "1rem",
+            perPage: 5,
+
+            //rewind : true,
+
+            breakpoints: {
+                1600: {
+                    perPage: 3,
+                },
+                992: {
+                    perPage: 2,
+                },
+                768: {
+                    perPage: 1,
+                },
+            },
+        }).mount();
+    });
+</script>
