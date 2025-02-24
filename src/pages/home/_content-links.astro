@@ -1,0 +1,96 @@
+<ul class="item list-group border mb-3 container-links">
+    <li class="list-group-item list-group-item fs-6 py-4 noHover">
+        <strong>Support Links</strong>
+    </li>
+
+    <li class="list-group-item">
+        <a href="#">
+            <div class="d-flex align-items-center gap-2">
+                <img src="/assets/images/icons/links/vpo.svg">
+                <div class="d-flex flex-column">
+                    <strong>VPO Documents</strong>
+                    <small class="text-neutral-colors-400">Knowledge Transfer</small>
+                </div>
+            </div>
+            <i class="bi bi-chevron-right"></i>
+        </a>
+    </li>
+
+    <li class="list-group-item">
+        <a href="#">
+            <div class="d-flex align-items-center gap-2">
+                <img src="/assets/images/icons/links/360.svg">
+                <div class="d-flex flex-column">
+                    <strong>Credit 360</strong>
+                    <small class="text-neutral-colors-400">Smart and flexible credit platform</small>
+                </div>
+            </div>
+            <i class="bi bi-chevron-right"></i>
+        </a>
+    </li>
+
+    <li class="list-group-item">
+        <a href="#">
+            <div class="d-flex align-items-center gap-2">
+                <img src="/assets/images/icons/links/gts.svg">
+                <div class="d-flex flex-column">
+                    <strong>GTS</strong>
+                    <small class="text-neutral-colors-400">Global Technical Specifications</small>
+                </div>
+            </div>
+            <i class="bi bi-chevron-right"></i>
+        </a>
+    </li>
+
+    <li class="list-group-item">
+        <a href="#">
+            <div class="d-flex align-items-center gap-2">
+                <img src="/assets/images/icons/links/sweep.svg">
+                <div class="d-flex flex-column">
+                    <strong>SweepTool</strong>
+                    <small class="text-neutral-colors-400">PowerBI Visualization</small>
+                </div>
+            </div>
+            <i class="bi bi-chevron-right"></i>
+        </a>
+    </li>
+</ul>
+
+<style>
+    .list-group-item:first-child {
+        border-top-left-radius: inherit;
+        border-top-right-radius: inherit;
+    }
+
+    .container-links .list-group-item {
+        border: 0;
+        border-bottom: 1px solid #f2f2f2;
+    }
+    .container-links .list-group-item:first-child {
+        border-bottom: 1px solid var(--bs-border-color);
+    }
+    .container-links .list-group-item:last-child {
+        border-bottom: 0;
+    }
+
+    .container-links li{
+        transition: all 0.3s;
+        background-color: #fff;
+    }
+    .container-links li.noHover:hover{
+        background-color: #fff;
+        border-bottom-color: var(--bs-border-color)!important;
+    }
+    .container-links li:hover{
+        background-color: var(--action-colors-defaul);
+    }
+
+    .container-links a{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 0.5rem;
+        text-decoration: none;
+        color: var(--neutral-colors-600);
+    }
+</style>

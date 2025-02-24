@@ -5,7 +5,9 @@ import Sidebar from "@includes/sidebar/sidebar.astro";
 import Footer from '@includes/footer.astro'
 import ContentBreadcrumb from './_content-breadcrumb.astro';
 import ContentInfoUser from './_content-info-user.astro';
-import ContentBannerLinks from './_content-banner-links.astro'
+import ContentCarousel from './_content-carousel.astro'
+import ContentLinks from './_content-links.astro'
+import ContentActivities from './_content-activities.astro';
 ---
 
 <Layout>
@@ -13,14 +15,18 @@ import ContentBannerLinks from './_content-banner-links.astro'
         <Navbar />
         <Sidebar />
 
+        <!-- animate__animated animate__bounceInRight -->
         <main class="mainApp">
-            <div class="main-home animate__animated animate__bounceInLeft">
+            <div class="main-home">
                 <ContentBreadcrumb />
                 <ContentInfoUser />
 
-                <ContentBannerLinks />
+                <section class="grid-banner-links">
+                    <ContentCarousel />
+                    <ContentLinks />
+                </section>
 
-
+                <ContentActivities />
             </div>
         </main>
 
@@ -47,6 +53,25 @@ import ContentBannerLinks from './_content-banner-links.astro'
     .main-home{
         width: 100%;
         max-width: 85%;
+    }
+
+    @media(max-width: 992px) {
+        .main-home{
+            max-width: 100%;
+        }
+    }
+
+    .grid-banner-links{
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        grid-template-rows: 1fr;
+        gap: 1rem;
+    }
+    @media(max-width: 992px) {
+        .grid-banner-links{
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr 1fr;
+        }
     }
 </style>
 

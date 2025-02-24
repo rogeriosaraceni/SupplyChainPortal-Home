@@ -40,6 +40,7 @@ import NavLogout from "./_nav-logout.astro";
     }
     .nav-utilities {
         gap: 1rem;
+        flex-direction: row;
     }
     .nav-utilities .dropdown-menu {
         display: flex;
@@ -61,5 +62,14 @@ import NavLogout from "./_nav-logout.astro";
     }
     .nav-utilities .dropdown-menu li:hover{
         background-color: var(--action-colors-defaul);
+    }
+
+    @media(max-width: 768px){
+        .nav-utilities {
+            gap: 0.5rem;
+        }
+        .nav-utilities .text-nav-link{
+            display: none;
+        }
     }
 </style>

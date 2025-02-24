@@ -1,0 +1,80 @@
+<div class="item mb-3 p-3 border rounded">
+    <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img
+                    src="https://cdn.builder.io/api/v1/image/assets%2F2e5c7fb020194c1a8ee80f743d0b923e%2Fe17f7a1d54b44fa58835832c3b233dab?format=webp&width=2000"
+                    class="d-block w-100"
+                    alt="..."
+                />
+            </div>
+            <div class="carousel-item">
+                <img
+                    src="https://cdn.builder.io/api/v1/image/assets%2F2e5c7fb020194c1a8ee80f743d0b923e%2Fe17f7a1d54b44fa58835832c3b233dab?format=webp&width=2000"
+                    class="d-block w-100"
+                    alt="..."
+                />
+            </div>
+        </div>
+
+        <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#carouselExample"
+            data-bs-slide="prev"
+        >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+
+        <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselExample"
+            data-bs-slide="next"
+        >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+</div>
+
+<style is:inline>
+    .carousel-inner {
+        max-height: 330px;
+    }
+    .carousel-item img {
+        object-fit: cover;
+    }
+
+    /* .carousel-item {
+        -webkit-animation: zoom 5s ease-in-out;
+        animation: zoom 5s ease-in-out;
+    } */
+    .carousel-control-next,
+    .carousel-control-prev {
+        z-index: 20;
+    }
+
+    @-webkit-keyframes zoom {
+        from {
+            -webkit-transform: scale(1.5, 1.5);
+        }
+
+        to {
+            -webkit-transform: scale(1, 1);
+        }
+    }
+
+    @keyframes zoom {
+        from {
+            -webkit-transform: scale(1.5, 1.5);
+            transform: scale(1.5, 1.5);
+        }
+
+        to {
+            -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+        }
+    }
+</style>

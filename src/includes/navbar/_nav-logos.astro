@@ -1,6 +1,7 @@
 <div class="container-logos">
     <span class="logo-dvpo">
-        <img src="/assets/images/logos/logo-digital-vpo.svg" alt="logo" />
+        <img src="/assets/images/logos/symbol-dvpo.svg" alt="logo" />
+        <span class="text">Digital VPO</span>
     </span>
     <span class="text-sp">Supply Portal</span>
 </div>
@@ -13,11 +14,31 @@
         gap: 2rem;
     }
     .container-logos .logo-dvpo {
-        position: relative;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+    .container-logos .logo-dvpo .text {
+        font-size: 1rem;
+        font-weight: 600;
+        color: #0e0e0e;
+        text-wrap: nowrap;
     }
     .container-logos .text-sp {
         font-size: 1.125rem;
         font-weight: 600;
         color: var(--neutral-colors-400);
+    }
+
+    @media(max-width: 768px){
+        .container-logos {
+            gap: 1rem;
+        }
+        .container-logos .logo-dvpo .text{
+            display: none;
+        }
+        .container-logos .text-sp {
+            font-size: 1rem;
+        }
     }
 </style>

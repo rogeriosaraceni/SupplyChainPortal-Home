@@ -1,3 +1,8 @@
+:root{
+    --bs-border-radius: 0.5rem;
+    --bs-box-shadow: box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
 b, strong {
     font-weight: 600;
 }
@@ -7,8 +12,6 @@ b, strong {
 
 .card{
     border: 0;
-    border-radius: 0.625rem;
-    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
 }    
 
 .btn{
