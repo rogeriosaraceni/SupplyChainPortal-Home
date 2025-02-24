@@ -1,28 +1,24 @@
 ---
 import Layout from '@layouts/Layout.astro';
+import Navbar from '@includes/navbar/navbar.astro'
+import Sidebar from "@includes/sidebar/sidebar.astro";
+import Footer from '@includes/footer.astro'
 ---
 
 <Layout>
-    <!-- <Navbar />
-    <Sidebar />
-
-    <main>
-
-    </main>
-
-    <Footer /> -->
-
     <section class="wrapper-app">
-        <nav class="navbar-app">Navbar</nav>
-        <aside class="sidebar-app">Sidebar</aside>
-        <main class="main-app">
+        <Navbar />
+        <Sidebar />
+
+        <main class="mainApp">
             <h1>Main</h1>
 
             <p>
                 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
             </p>
         </main>
-        <footer class="footer-app">Footer</footer>
+
+        <Footer />
     </section>
 </Layout>
 
@@ -37,36 +33,11 @@ import Layout from '@layouts/Layout.astro';
             "sidebar main"
             "sidebar footer";
     }
-    .navbar-app{
-        grid-area: navbar;
-        padding: 1rem;
-        background-color: rgb(70, 151, 156);
-    }
-    .sidebar-app{
-        grid-area: sidebar;
-        position: sticky;
-        padding: 32px 8px;
 
-        background-color: rgb(102, 47, 47);
-    }
-    .sidebar-app.show{
-        width: 300px;
-    }
-    .main-app{
+    .mainApp{
         grid-area: main;
         padding: 1rem;
     }
-    .footer-app{
-        grid-area: footer;
-        padding: 1rem;
-        background-color: rgb(208, 255, 0);
-    }
 </style>
 
-<script is:inline>
-    const sidebar = document.querySelector('.sidebar-app')
 
-    sidebar.addEventListener('click', () => {
-        sidebar.classList.toggle('show')
-    })
-</script>

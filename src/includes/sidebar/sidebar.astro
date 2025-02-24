@@ -1,0 +1,22 @@
+<aside class="sidebarApp">Sidebar</aside>
+
+<style>
+     .sidebarApp{
+        grid-area: sidebar;
+        position: sticky;
+        padding: 32px 8px;
+
+        background-color: rgb(102, 47, 47);
+    }
+    .sidebarApp.show{
+        width: 300px;
+    }
+</style>
+
+<script is:inline>
+    const sidebar = document.querySelector('.sidebarApp')
+
+    sidebar.addEventListener('click', () => {
+        sidebar.classList.toggle('show')
+    })
+</script>
