@@ -1,0 +1,117 @@
+<li class="nav-item dropdown">
+    <button
+        class="d-flex align-items-center nav-link dropdown-toggle dropdown-toggle-animation gap-1 px-1"
+        role="button"
+        data-bs-toggle="dropdown"
+        aria-expanded="false"
+    >
+        <img src="/assets/images/navbar/language.svg" />
+        <span>English</span>
+    </button>
+
+    <ul class="dropdown-menu dropdown-menu-animation dropdown-menu-end shadow">
+        <li class="language checked">
+            <label>
+                <span>English</span>
+                <input type="radio" name="language" value="English" checked>
+                <i class="bi bi-check icon"></i>
+            </label>
+        </li>
+        <li class="language">
+            <label>
+                <span>中文</span>
+                <input type="radio" name="language" value="中文">
+                <i class="bi bi-check icon"></i>
+            </label>
+        </li>
+        <li class="language">
+            <label>
+                <span>Nederlands</span>
+                <input type="radio" name="language" value="Nederlands">
+                <i class="bi bi-check icon"></i>
+            </label>
+        </li>
+        <li class="language">
+            <label>
+                <span>Français</span>
+                <input type="radio" name="language" value="Français">
+                <i class="bi bi-check icon"></i>
+            </label>
+        </li>
+        <li class="language">
+            <label>
+                <span>Deutsche</span>
+                <input type="radio" name="language" value="Deutsche">
+                <i class="bi bi-check icon"></i>
+            </label>
+        </li>
+        <li class="language">
+            <label>
+                <span>한국어</span>
+                <input type="radio" name="language" value="한국어">
+                <i class="bi bi-check icon"></i>
+            </label>
+        </li>
+        <li class="language">
+            <label>
+                <span>Português</span>
+                <input type="radio" name="language" value="Português">
+                <i class="bi bi-check icon"></i>
+            </label>
+        </li>
+        <li class="language">
+            <label>
+                <span>русский</span>
+                <input type="radio" name="language" value="русский">
+                <i class="bi bi-check icon"></i>
+            </label>
+        </li>
+        <li class="language">
+            <label>
+                <span>Español</span>
+                <input type="radio" name="language" value="Español">
+                <i class="bi bi-check icon"></i>
+            </label>
+        </li>
+        <li class="language">
+            <label>
+                <span>Tiếng Việt</span>
+                <input type="radio" name="language" value="Tiếng Việt">
+                <i class="bi bi-check icon"></i>
+            </label>
+        </li>
+        <li class="language">
+            <label>
+                <span>українська</span>
+                <input type="radio" name="language" value="українська">
+                <i class="bi bi-check icon"></i>
+            </label>
+        </li>
+    </ul>
+</li>
+
+<style is:inline>
+    .nav-utilities .dropdown-menu li.language label{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+    }
+    .nav-utilities .dropdown-menu li.language label input{
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        -ms-progress-appearance: none;
+        appearance: none;
+    }
+    .nav-utilities .dropdown-menu li.language label .icon{
+        display: none;
+        font-size: 1.3rem;
+    }
+    .nav-utilities .dropdown-menu li.language.checked label .icon{
+        display: block;
+    }
+    .nav-utilities .dropdown-menu li.language.checked{
+        display: block;
+        font-weight: 600;
+    }
+</style>

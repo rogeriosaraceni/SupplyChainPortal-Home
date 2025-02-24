@@ -1,174 +1,46 @@
+---
+import NavLogos from "./_nav-logos.astro";
+import NavLanguage from "./_nav-language.astro";
+import NavUser from "./_nav-user.astro";
+import NavHelp from "./_nav-help.astro";
+import NavLogout from "./_nav-logout.astro";
+---
+
 <nav class="navbarApp navbar navbar-expand-md">
     <div class="container-fluid">
         <section class="wrapper-navbar">
-            <div class="container-logos">
-                <span class="logo-dvpo">
-                    <img src="/assets/images/logo-digital-vpo.svg" alt="logo" />
-                </span>
-                <span class="text-sp">Supply Portal</span>
-            </div>
+            <NavLogos />
 
             <div class="navbar-nav nav-utilities">
-                <li class="nav-item dropdown">
-                    <button
-                        class="d-flex align-items-center nav-link dropdown-toggle dropdown-toggle-animation gap-1 px-1"
-                        role="button"
-                        data-bs-toggle="dropdown"
-                        aria-expanded="false"
-                    >
-                        <img src="/assets/images/navbar/leading.svg" />
-                        <span>English</span>
-                    </button>
+                <NavLanguage />
+                <NavUser />
 
-                    <ul class="dropdown-menu dropdown-menu-animation dropdown-menu-end shadow">
-                        <li class="leading checked">
-                            <label>
-                                <span>English</span>
-                                <input type="radio" name="leading" value="English" checked>
-                                <i class="bi bi-check icon"></i>
-                            </label>
-                        </li>
-                        <li class="leading">
-                            <label>
-                                <span>中文</span>
-                                <input type="radio" name="leading" value="中文">
-                                <i class="bi bi-check icon"></i>
-                            </label>
-                        </li>
-                        <li class="leading">
-                            <label>
-                                <span>Nederlands</span>
-                                <input type="radio" name="leading" value="Nederlands">
-                                <i class="bi bi-check icon"></i>
-                            </label>
-                        </li>
-                        <li class="leading">
-                            <label>
-                                <span>Français</span>
-                                <input type="radio" name="leading" value="Français">
-                                <i class="bi bi-check icon"></i>
-                            </label>
-                        </li>
-                        <li class="leading">
-                            <label>
-                                <span>Deutsche</span>
-                                <input type="radio" name="leading" value="Deutsche">
-                                <i class="bi bi-check icon"></i>
-                            </label>
-                        </li>
-                        <li class="leading">
-                            <label>
-                                <span>한국어</span>
-                                <input type="radio" name="leading" value="한국어">
-                                <i class="bi bi-check icon"></i>
-                            </label>
-                        </li>
-                        <li class="leading">
-                            <label>
-                                <span>Português</span>
-                                <input type="radio" name="leading" value="Português">
-                                <i class="bi bi-check icon"></i>
-                            </label>
-                        </li>
-                        <li class="leading">
-                            <label>
-                                <span>русский</span>
-                                <input type="radio" name="leading" value="русский">
-                                <i class="bi bi-check icon"></i>
-                            </label>
-                        </li>
-                        <li class="leading">
-                            <label>
-                                <span>Español</span>
-                                <input type="radio" name="leading" value="Español">
-                                <i class="bi bi-check icon"></i>
-                            </label>
-                        </li>
-                        <li class="leading">
-                            <label>
-                                <span>Tiếng Việt</span>
-                                <input type="radio" name="leading" value="Tiếng Việt">
-                                <i class="bi bi-check icon"></i>
-                            </label>
-                        </li>
-                        <li class="leading">
-                            <label>
-                                <span>українська</span>
-                                <input type="radio" name="leading" value="українська">
-                                <i class="bi bi-check icon"></i>
-                            </label>
-                        </li>
-                    </ul>
-                </li>
-
-                <li class="nav-item dropdown">
-                    <button
-                        class="d-flex align-items-center nav-link dropdown-toggle dropdown-toggle-animation gap-1 px-1"
-                        role="button"
-                        data-bs-toggle="dropdown"
-                        aria-expanded="false"
-                    >
-                        <img src="/assets/images/navbar/user.svg" />
-                        <span>John C.</span>
-                    </button>
-
-                    <ul class="dropdown-menu dropdown-menu-animation dropdown-menu-end shadow">
-                        <li>
-                            <a href="">My Settings</a>
-                        </li>
-                        <li>
-                            <a href="">Log Out</a>
-                        </li>
-                    </ul>
-                </li>
-
+                <NavHelp />
+                <NavLogout />
             </div>
         </section>
     </div>
 </nav>
 
-<style>
-    .nav-link{
-        var(--neutral-colors-600);
-    }
+<style is:global>
+    .nav-link{ var(--neutral-colors-600);}
     .nav-link:focus,
-    .nav-link:hover {
-        color: #000;
-    }
+    .nav-link:hover { color: #000;}
 
     .navbarApp {
         grid-area: navbar;
         padding: 1rem 0;
-        border-bottom: 1px solid #d9d9d9;
+        border-bottom: 1px solid #e9e9e9;
         background-color: #ffffff;
     }
-
     .wrapper-navbar {
         width: 100%;
         display: flex;
         justify-content: space-between;
     }
-
-    .container-logos {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 2rem;
-    }
-    .container-logos .logo-dvpo {
-        position: relative;
-    }
-    .container-logos .text-sp {
-        font-size: 1.125rem;
-        font-weight: 600;
-        color: var(--neutral-colors-400);
-    }
-
     .nav-utilities {
-        gap: 2rem;
-
+        gap: 1rem;
     }
-
     .nav-utilities .dropdown-menu {
         display: flex;
         flex-direction: column;
@@ -188,28 +60,6 @@
         transition: all 0.3s;
     }
     .nav-utilities .dropdown-menu li:hover{
-        background-color: var(--action-colors-defaul);
-    }
-
-    .nav-utilities .dropdown-menu li.leading label{
-        display: flex;
-        justify-content: space-between;
-        position: relative;
-    }
-    .nav-utilities .dropdown-menu li.leading label input{
-        -webkit-appearance: none;
-        -moz-appearance: none;
-        -ms-progress-appearance: none;
-        appearance: none;
-    }
-    .nav-utilities .dropdown-menu li.leading label .icon{
-        display: none;
-    }
-    .nav-utilities .dropdown-menu li.leading.checked label .icon{
-        display: block;
-    }
-    .nav-utilities .dropdown-menu li.leading.checked{
-        display: block;
         background-color: var(--action-colors-defaul);
     }
 </style>

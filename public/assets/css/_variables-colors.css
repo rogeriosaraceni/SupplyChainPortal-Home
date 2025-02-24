@@ -9,6 +9,7 @@ class text color
 * - variables default
 * -------------------------------------------------------------------- */
 :root {
+    --neutral-colors-300: #bfbfbf;
     --neutral-colors-400: #666666;
     --neutral-colors-600: #0E0E0E;
 
@@ -22,6 +23,7 @@ class text color
 /* --------------------------------------------------------------------
 * - class text color
 ---------------------------------------------------------------------- */
+.text-neutral-colors-300  { color: var(--neutral-colors-300)!important}
 .text-neutral-colors-400  { color: var(--neutral-colors-400)!important}
 .text-neutral-colors-600  { color: var(--neutral-colors-600)!important}
 .text-brand-color-300     { color: var(--brand-colors-300)!important}
@@ -31,6 +33,7 @@ class text color
 /* --------------------------------------------------------------------
 * - class bg color
 ---------------------------------------------------------------------- */
+.bg-neutral-colors-300  { color: var(--neutral-colors-300)!important}
 .bg-neutral-colors-400  { background-color: var(--neutral-colors-400)!important}
 .bg-neutral-colors-600  { background-color: var(--neutral-colors-600)!important}
 .bg-brand-color-300     { background-color: var(--brand-colors-300)!important}

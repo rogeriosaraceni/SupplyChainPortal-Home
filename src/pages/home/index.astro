@@ -3,23 +3,29 @@ import Layout from '@layouts/Layout.astro';
 import Navbar from '@includes/navbar/navbar.astro'
 import Sidebar from "@includes/sidebar/sidebar.astro";
 import Footer from '@includes/footer.astro'
+import ContentBreadcrumb from './_content-breadcrumb.astro';
+import ContentInfoUser from './_content-info-user.astro';
+import ContentBannerLinks from './_content-banner-links.astro'
 ---
 
 <Layout>
-    <section class="wrapper-app">
+    <div class="wrapper-app">
         <Navbar />
         <Sidebar />
 
         <main class="mainApp">
-            <h1>Main</h1>
+            <div class="main-home">
+                <ContentBreadcrumb />
+                <ContentInfoUser />
 
-            <p>
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-            </p>
+                <ContentBannerLinks />
+
+
+            </div>
         </main>
 
         <Footer />
-    </section>
+    </div>
 </Layout>
 
 <style>
@@ -36,7 +42,11 @@ import Footer from '@includes/footer.astro'
 
     .mainApp{
         grid-area: main;
-        padding: 1rem;
+        padding: 2rem;
+    }
+    .main-home{
+        width: 100%;
+        max-width: 85%;
     }
 </style>
 
