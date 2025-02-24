@@ -3,11 +3,11 @@ import Layout from '@layouts/Layout.astro';
 import Navbar from '@includes/navbar/navbar.astro'
 import Sidebar from "@includes/sidebar/sidebar.astro";
 import Footer from '@includes/footer.astro'
-import ContentBreadcrumb from './_content-breadcrumb.astro';
-import ContentInfoUser from './_content-info-user.astro';
-import ContentCarousel from './_content-carousel.astro'
+import ContentSlideBanner from './_content-slide-banner.astro'
 import ContentLinks from './_content-links.astro'
 import ContentActivities from './_content-activities.astro';
+
+import './_assets/styles.css'
 ---
 
 <Layout>
@@ -16,11 +16,21 @@ import ContentActivities from './_content-activities.astro';
 
     <section class="wrapperMainApp">
         <main class="mainContentApp contentHome">
-            <ContentBreadcrumb />
-            <ContentInfoUser />
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item">Home</li>
+                    <i class="bi bi-chevron-right icon"></i>
+                </ol>
+            </nav>
+
+            <div class="info-user">
+                <div class="name">Welcome, <strong>Jonh</strong></div>
+                <div class="position">Global Administrator</div>
+                <div class="email">john@ab-inbev.com</div>
+            </div>
 
             <section class="grid-banner-links">
-                <ContentCarousel />
+                <ContentSlideBanner />
                 <ContentLinks />
             </section>
 
@@ -30,24 +40,3 @@ import ContentActivities from './_content-activities.astro';
         <Footer />
     </section>
 </Layout>
-
-<style is:global>
-    .contentHome{
-        width: 100%;
-        max-width: 80%;
-    }
-    .grid-banner-links{
-        display: grid;
-        grid-template-columns: 2fr 1fr;
-        grid-template-rows: 1fr;
-        gap: 1rem;
-    }
-    @media(max-width: 992px) {
-        .grid-banner-links{
-            grid-template-columns: 1fr;
-            grid-template-rows: 1fr 1fr;
-        }
-    }
-</style>
-
-

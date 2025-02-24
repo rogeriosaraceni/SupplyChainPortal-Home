@@ -76,35 +76,13 @@
     </section>
 </div>
 
-<style is:inline>
-    #splide-activities{
-        padding: 0 2rem;
-    }
-    .splide__slide.item {
-        height: 184px;
-    }
-    .splide__slide.item a {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        height: 100%;
-        padding: 1rem;
-        text-decoration: none;
-        color: var(--neutral-colors-600);
-    }
-    .splide__slide.item a:hover {
-        background-color: var(--action-colors-defaul);
-    }
-</style>
-
 <script is:inline>
     addEventListener("load", () => {
         new Splide("#splide-activities", {
             type: "loop",
+            pagination : false,
             gap: "1rem",
             perPage: 5,
-
-            //rewind : true,
 
             breakpoints: {
                 1600: {

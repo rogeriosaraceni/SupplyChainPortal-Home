@@ -1,0 +1,47 @@
+<div class="item mb-3 p-3 border rounded">
+    <section class="splide splide-default" id="splide-banner">
+        <div class="splide__track">
+            <ul class="splide__list">
+                <li class="splide__slide item border rounded">
+                    <div class="d-flex flex-column">
+                        <div class="d-flex justify-content-between">
+                            <div class="text">
+                                <h3 class="mb-4">
+                                    New Supply<br>
+                                    Chain Portal
+                                </h3>
+
+                                <p class="mb-4">
+                                    Friendlier and faster!<br>
+                                    Starting this new age, <strong>Jan 15th</strong>:<br>
+                                    Assessment will be run in the new system
+                                </p>
+
+                                <a class="btn btn-main" href="#">
+                                    <strong>Access New Portal</strong>
+                                </a>
+                            </div>
+                            <img class="img1" src="/assets/images/home/carousel/img1.png">
+                        </div>
+                        <div class="bar"></div>
+                    </div>
+                </li>
+
+                <li class="splide__slide item border rounded">
+                    <img src="/assets/images/home/carousel/img2.jpeg"/>
+                </li>
+            </ul>
+        </div>
+    </section>
+</div>
+
+<script is:inline>
+    addEventListener("load", () => {
+        new Splide("#splide-banner", {
+            type: "loop",
+            gap: "1rem",
+            pagination : false,
+
+        }).mount();
+    });
+</script>
