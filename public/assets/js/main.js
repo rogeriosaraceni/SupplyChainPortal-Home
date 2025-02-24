@@ -70,11 +70,11 @@ const tooltipList = [...tooltipTriggerList].map((tooltipTriggerEl) => new bootst
 /** --------------------------------------------------------------------
  * data-row="delete"
 --------------------------------------------------------------------- */
-$('[data-row="delete"]').click(function () {
-    if (!confirm("Você tem certeza que deseja excluir?")) {
-        return false;
-    }
-});
+// $('[data-row="delete"]').click(function () {
+//     if (!confirm("Você tem certeza que deseja excluir?")) {
+//         return false;
+//     }
+// });
 
 /** --------------------------------------------------------------------
  * tab-datatable-scroll-x

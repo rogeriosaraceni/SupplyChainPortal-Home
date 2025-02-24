@@ -14,6 +14,24 @@ body {
 /* --------------------------------------------------------------------
 btns
 ---------------------------------------------------------------------- */
+.btn-main {
+    margin-bottom: 1.5rem;
+    width: 100%;
+    text-align: center;
+    font-weight: 600;
+    transition: all .3s;
+    background-color: var(--action-colors-defaul);
+}
+.btn-main:hover,
+.btn-main:focus,
+.btn-main:active {
+    color: #fff;
+    background-color: #000;
+}
+
+/* --------------------------------------------------------------------
+btns
+---------------------------------------------------------------------- */
 .btn-clearfix {
     margin-top: 3px;
     margin-bottom: 0;
