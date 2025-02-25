@@ -33,8 +33,20 @@ import ContentNavSidebarSubApp from './_content-navSidebarSubApp.astro'
     }
     navigationActive()
 
+    // Função para alternar a sidebar
     $('[data-toggle="sidebar"]').on('click', function() {
-        $(this).toggleClass('rotate');
+        $(this).toggleClass('rotate'); // Alterna a classe 'rotate' no botão
+
+        // Verifica se a sidebar está fechada (não tem a classe 'show')
+        if ($('.sidebarApp').hasClass('show')) {
+            // Fecha todos os submenus
+            $('.navSidebarSubApp').hide('fast');
+
+            // Remove a classe 'activeOpenSubMenu' de todos os links
+            $('[data-link]').removeClass('activeOpenSubMenu');
+        }
+
+        // Alterna a classe 'show' na sidebar
         $('.sidebarApp').toggleClass('show');
     });
 
