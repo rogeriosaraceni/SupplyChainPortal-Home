@@ -7,7 +7,6 @@
  * - navbarSideCollapse Bootstrap
  * -
  * - mainAppMarginTop
- * - navigationActive
  * - data-row="delete"
  *
  * - tab-datatable-scroll-x
@@ -52,20 +51,7 @@ const tooltipList = [...tooltipTriggerList].map((tooltipTriggerEl) => new bootst
 //     }
 // }
 
-/** --------------------------------------------------------------------
- * navigationActive
---------------------------------------------------------------------- */
-// const navigationActive = () => {
-//     const currentUrl = window.location.pathname;
-//     const navLinks = document.querySelectorAll(`.navbar-nav .nav-item a[href$="${currentUrl}"]`)
 
-//     navLinks.forEach(function (link) {
-//         link.classList.add("active")
-
-//         const dropdownParent = link.closest(".nav-item.dropdown")
-//         dropdownParent?.classList.add("active")
-//     });
-// }
 
 /** --------------------------------------------------------------------
  * data-row="delete"
@@ -142,5 +128,4 @@ const tooltipList = [...tooltipTriggerList].map((tooltipTriggerEl) => new bootst
  * Active Functions
 --------------------------------------------------------------------- */
 // mainAppMarginTop()
-// navigationActive()
 // datatableScrollX()

@@ -27,4 +27,22 @@ import ContentNavSidebarSubApp from './_content-navSidebarSubApp.astro'
         sidebarApp.classList.toggle('show')
         navSidebarSubApp.classList.toggle('d-flex')
     })
+
+    /** --------------------------------------------------------------------
+     * navigationActive
+    --------------------------------------------------------------------- */
+    const navigationActive = () => {
+        const currentUrl = window.location.pathname;
+        const navLinks = document.querySelectorAll(`.navSidebarApp .nav-item a[href$="${currentUrl}"]`)
+
+        navLinks.forEach(function (link) {
+            link.classList.add("active")
+
+
+            //const dropdownParent = link.closest(".nav-item.dropdown")
+            //dropdownParent?.classList.add("active")
+        });
+    }
+
+    navigationActive()
 </script>
