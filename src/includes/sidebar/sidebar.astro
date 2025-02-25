@@ -4,18 +4,18 @@ import ContentNavSidebarApp from './_content-navSidebarApp.astro'
 import ContentNavSidebarSubApp from './_content-navSidebarSubApp.astro'
 ---
 
-<aside class="sidebarApp shadow">
-    <button type="button" class="btn-toggle-sidebar border rounded shadow" data-toggle="sidebar">
+<aside class="sidebarApp">
+    <div class="btn-toggle-sidebar border rounded shadow" data-toggle="sidebar">
         <div class="icon">
             <i class="bi bi-chevron-double-right"></i>
         </div>
-    </button>
+    </div>
 
     <section class="contentSidebarApp">
         <ContentNavSidebarApp />
-        <ContentNavSidebarSubApp />
     </section>
 </aside>
+<ContentNavSidebarSubApp />
 
 <script is:inline>
     /** --------------------------------------------------------------------
@@ -33,45 +33,35 @@ import ContentNavSidebarSubApp from './_content-navSidebarSubApp.astro'
     }
     navigationActive()
 
-    // Função para alternar a sidebar
-    // $('[data-toggle="sidebar"]').on('click', function() {
-    //     $(this).toggleClass('rotate'); // Alterna a classe 'rotate' no botão
 
-    //     // Verifica se a sidebar está fechada (não tem a classe 'show')
-    //     if ($('.sidebarApp').hasClass('show')) {
-    //         $('.navSidebarSubApp').hide('fast');
-    //         $('[data-link]').removeClass('activeOpenSubMenu');
-    //     }
+    $(document).ready(function() {
+        $('[data-link]').on('click', function(event) {
+            event.preventDefault()
 
-    //     // Alterna a classe 'show' na sidebar
-    //     $('.sidebarApp').toggleClass('show');
-    // });
+            let attr = $(this).data('link')
 
-    // Função para lidar com os links do menu
-    $('[data-link]').on('click', function(event) {
-        event.preventDefault();
+            $('[data-link]').removeClass('activeOpenSubMenu')
 
-        let attr = $(this).data('link');
+            $(this).toggleClass('activeOpenSubMenu')
 
-        $('[data-link]').removeClass('activeOpenSubMenu');
+            let ul = $(`[data-ul="${attr}"]`)
+            if (ul.length === 0) return
 
-        $(this).toggleClass('activeOpenSubMenu')
+            let isVisibleUL = ul.hasClass('show')
 
-        let ul = $(`[data-ul="${attr}"]`);
-        if (ul.length === 0) return;
+            // Fecha todos os submenus, exceto o correspondente ao link clicado
+            $('.navSidebarSubApp').not(ul).removeClass('show')
 
-        let isVisible = ul.is(':visible');
-
-        $('.navSidebarSubApp').not(ul).hide('fast');
-
-        if (!isVisible) {
-            ul.show('fast');
-        } else {
-            ul.hide('fast');
-            $('[data-link]').removeClass('activeOpenSubMenu');
-        }
-
-        // Alterna a classe 'show' na sidebar
-        $('.sidebarApp').toggleClass('show');
-    });
+            // Alterna a visibilidade do submenu correspondente
+            if (!isVisibleUL) {
+                ul.addClass('show')
+                $('[data-toggle="sidebar"]').addClass('rotate')
+            }
+            else {
+                ul.removeClass('show');
+                $('[data-toggle="sidebar"]').removeClass('rotate')
+                $('[data-link]').removeClass('activeOpenSubMenu')
+            }
+        })
+    })
 </script>
