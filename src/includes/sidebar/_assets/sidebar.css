@@ -7,7 +7,7 @@
     top: var(--navbar-height);
     left: 0;
     width: var(--sidebar-width);
-    /* overflow: hidden; */
+    overflow: hidden;
     height: calc(100vh - var(--navbar-height));
     background-color: #fff;
     box-shadow: var(--bs-box-shadow) !important;
@@ -69,14 +69,14 @@
 * - navSidebarSubApp (nav expanse)
 ---------------------------------------------------------------------- */
 .navSidebarSubApp{
-    display: none;
+    overflow: hidden;
     flex-direction: column;
     gap: 0.5rem;
     padding: 2.5rem 0.5rem;
     width: 100%;
     height: 100vh;
     background-color: #fff;
-    transition: all 0.6s;
+    transition: all 0.2s;
     border-left: 1px solid var(--bs-border-color);
 }
 .navSidebarSubApp .nav-item .nav-link{

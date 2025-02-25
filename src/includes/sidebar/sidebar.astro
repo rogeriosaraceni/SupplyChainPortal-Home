@@ -18,16 +18,6 @@ import ContentNavSidebarSubApp from './_content-navSidebarSubApp.astro'
 </aside>
 
 <script is:inline>
-    const toggleSidebar = document.querySelector('[data-toggle="sidebar"]')
-    const sidebarApp = document.querySelector('.sidebarApp')
-    const navSidebarSubApp = document.querySelector('.navSidebarSubApp')
-
-    toggleSidebar.addEventListener('click', function (){
-        (this).classList.toggle('rotate')
-        sidebarApp.classList.toggle('show')
-        navSidebarSubApp.classList.toggle('d-flex')
-    })
-
     /** --------------------------------------------------------------------
      * navigationActive
     --------------------------------------------------------------------- */
@@ -37,12 +27,35 @@ import ContentNavSidebarSubApp from './_content-navSidebarSubApp.astro'
 
         navLinks.forEach(function (link) {
             link.classList.add("active")
-
-
             //const dropdownParent = link.closest(".nav-item.dropdown")
             //dropdownParent?.classList.add("active")
         });
     }
-
     navigationActive()
+
+    $('[data-toggle="sidebar"]').on('click', function() {
+        $(this).toggleClass('rotate');
+        $('.sidebarApp').toggleClass('show');
+    });
+
+    // Função para lidar com os links do menu
+    $('[data-link]').on('click', function(event) {
+        event.preventDefault();
+
+        let attr = $(this).data('link');
+        let ul = $(`[data-ul="${attr}"]`);
+        if (ul.length === 0) return;
+
+        let isVisible = ul.is(':visible');
+
+        $('.navSidebarSubApp').not(ul).hide('fast');
+
+        if (!isVisible) {
+            ul.show('fast');
+            ul.removeClass('opacity-0')
+        } else {
+            ul.hide('fast');
+            ul.addClass('opacity-0')
+        }
+    });
 </script>
