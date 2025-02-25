@@ -1,125 +1,4 @@
-<aside class="sidebarApp">
-    <button type="button" class="btn-toggle-sidebar border rounded shadow" data-toggle="sidebar">
-        <div class="icon">
-            <i class="bi bi-chevron-double-right"></i>
-        </div>
-    </button>
-
-    <section class="contentSidebarApp">
-        <div class="wrapperNavSidebarApp">
-            <ul class="nav navSidebarApp">
-                <li class="nav-item">
-                    <a class="nav-item active" href="/">
-                        <span class="icon">
-                            <img src="/assets/images/icons/sidebar/home.svg">
-                        </span>
-                        <span class="name">Home</span>
-                    </a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-item" href="">
-                        <span class="icon">
-                            <img src="/assets/images/icons/sidebar/assessments.svg">
-                        </span>
-                        <span class="name">Assessments</span>
-                    </a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-item" href="">
-                        <span class="icon">
-                            <img src="/assets/images/icons/sidebar/excellence.svg">
-                        </span>
-                        <span class="name">Excellence<br>Programs<br>Results</span>
-                    </a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-item" href="">
-                        <span class="icon">
-                            <img src="/assets/images/icons/sidebar/dvpo.svg">
-                        </span>
-                        <span class="name">DVPO</span>
-                    </a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-item" href="">
-                        <span class="icon">
-                            <img src="/assets/images/icons/sidebar/vpodocs.svg">
-                        </span>
-                        <span class="name">VPO Docs</span>
-                    </a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-item" href="">
-                        <span class="icon">
-                            <img src="/assets/images/icons/sidebar/links.svg">
-                        </span>
-                        <span class="name">Links</span>
-                    </a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-item" href="">
-                        <span class="icon">
-                            <img src="/assets/images/icons/sidebar/settings.svg">
-                        </span>
-                        <span class="name">Settings</span>
-                    </a>
-                </li>
-            </ul>
-
-            <div class="wrapperNavSidebarSubApp shadow">
-                <ul class="nav navSidebarSubApp">
-                    <li class="nav-item">sdsadsad</li>
-                </ul>
-            </div>
-        </div>
-    </section>
-</aside>
-
 <style is:global>
-    .wrapperNavSidebarApp{
-        display: flex;
-        gap: 1rem;
-
-    }
-
-    .wrapperNavSidebarSubApp{
-        position: absolute;
-        padding: 2.5rem 0.5rem 1rem 0.5rem;
-        margin-left: -400px;
-        width: 0;
-        height: 100%;
-        transition: all 0.3s;
-        background-color: #fff;
-    }
-    .wrapperNavSidebarSubApp.show {
-        width: 234px;
-        margin-left: var(--sidebar-width);
-    }
-    .navSidebarSubApp{
-        display: flex;
-        flex-direction: column;
-    }
-
-
-
-
-    .sidebarApp {
-        z-index: 100;
-        position: fixed;
-        top: var(--navbar-height);
-        left: 0;
-        width: var(--sidebar-width);
-        height: calc(100vh - var(--navbar-height));
-        background-color: #fff;
-        box-shadow: var(--bs-box-shadow) !important;
-    }
-
     .btn-toggle-sidebar{
         z-index: 10;
         position: absolute;
@@ -137,29 +16,215 @@
     .btn-toggle-sidebar.rotate .icon{
         transform: rotate(-180deg);
     }
+</style>
+
+<aside class="sidebarApp shadow">
+    <button type="button" class="btn-toggle-sidebar border rounded shadow" data-toggle="sidebar">
+        <div class="icon">
+            <i class="bi bi-chevron-double-right"></i>
+        </div>
+    </button>
+
+    <section class="contentSidebarApp">
+        <ul class="nav navSidebarApp">
+            <li class="nav-item">
+                <a class="nav-link active" href="/">
+                    <span class="icon">
+                        <img src="/assets/images/icons/sidebar/home.svg">
+                    </span>
+                    <span class="name">Home</span>
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="">
+                    <span class="icon">
+                        <img src="/assets/images/icons/sidebar/assessments.svg">
+                    </span>
+                    <span class="name">Assessments</span>
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="">
+                    <span class="icon">
+                        <img src="/assets/images/icons/sidebar/excellence.svg">
+                    </span>
+                    <span class="name">Excellence Programs Results</span>
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="">
+                    <span class="icon">
+                        <img src="/assets/images/icons/sidebar/dvpo.svg">
+                    </span>
+                    <span class="name">DVPO</span>
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="">
+                    <span class="icon">
+                        <img src="/assets/images/icons/sidebar/vpodocs.svg">
+                    </span>
+                    <span class="name">VPO Docs</span>
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="">
+                    <span class="icon">
+                        <img src="/assets/images/icons/sidebar/links.svg">
+                    </span>
+                    <span class="name">Links</span>
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="">
+                    <span class="icon">
+                        <img src="/assets/images/icons/sidebar/settings.svg">
+                    </span>
+                    <span class="name">Settings</span>
+                </a>
+            </li>
+        </ul>
+
+        <ul class="nav navSidebarSubApp" id="navAssessments">
+            <h6 class="mb-0">ASSESSMENTS</h6>
+            <li class="nav-item">
+                <a class="nav-link" href="">VPO</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="">SMS</a>
+            </li>
+        </ul>
+
+        <ul class="nav navSidebarSubApp d-none" id="navDVPO">
+            <h6 class="mb-0">DVPO</h6>
+            <li class="nav-item">
+                <a class="nav-link" href="">GOP and Toolkits</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="">Ideas and Best Practices</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="">Shopfloor Problem Solving</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="">Meetings and Actions</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="">Standards</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="">Autonomous Teams</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="">SKAP</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="">Safety Portal</a>
+            </li>
+        </ul>
+
+        <ul class="nav navSidebarSubApp d-none" id="navLinks">
+            <h6 class="mb-0">LINKS</h6>
+            <li class="nav-item">
+                <a class="nav-link" href="">Deephow</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="">SweepTool - BOPs</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="">SweepTool - PowerBI</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="">VPO Videos</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="">Credit 360</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="">GTS - Global Tech Spec   </a>
+            </li>
+        </ul>
+
+        <ul class="nav navSidebarSubApp d-none" id="navSettings">
+            <h6 class="mb-0">SETTINGS</h6>
+            <li class="nav-item">
+                <a class="nav-link" href="">System Transition</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="">Region</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="">Countries</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="">Type of Facility</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="">Facilities</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="">News</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="">Systems</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="">Travel Schedule</a>
+            </li>
+        </ul>
+    </section>
+</aside>
+
+<style is:global>
+    .sidebarApp {
+        z-index: 100;
+        position: fixed;
+        top: var(--navbar-height);
+        left: 0;
+        width: var(--sidebar-width);
+        /* overflow: hidden; */
+        height: calc(100vh - var(--navbar-height));
+        background-color: #fff;
+        box-shadow: var(--bs-box-shadow) !important;
+        transition: all 0.3s;
+    }
+    .sidebarApp.show{
+        width: 320px;
+    }
 
     .contentSidebarApp {
-        position: sticky;
-        top: 0;
-        left: 0;
+        display: flex;
+        gap: 1rem;
         padding-bottom: 7rem;
         height: 100vh;
     }
+
     .navSidebarApp {
         flex-direction: column;
         gap: 1rem;
-        padding: 2.5rem 0.5rem 1rem 0.5rem;
+        padding: 3rem 0.5rem 1rem 0.5rem;
     }
-    .navSidebarApp .nav-item{
+    .navSidebarApp .nav-item .nav-link{
         display: flex;
         flex-direction: column;
+        justify-content: center;
+        align-items: center;
         text-align: center;
         text-decoration: none;
-        font-size: 0.75rem;
-        color: var(--neutral-colors-600);
+        padding: 0;
     }
     .navSidebarApp .nav-item .icon{
+        display: flex;
+        justify-content: center;
+        text-align: center;
         padding: 0.5rem;
+        margin-bottom: 0.25rem;
         border-radius: 4px;
         transition: all 0.3s;
         background-color: transparent;
@@ -170,14 +235,39 @@
     .navSidebarApp .nav-item .active .icon{
         background-color: var(--action-colors-defaul);
     }
+    .navSidebarApp .nav-item .name{
+        width: 42px;
+        overflow: hidden;
+        line-height: 1.1;
+        font-size: 0.75rem;
+        color: var(--neutral-colors-600);
+    }
+
+    .navSidebarSubApp{
+        display: none;
+        flex-direction: column;
+        gap: 1rem;
+        padding: 2.5rem 0;
+        width: 100%;
+        height: 100%;
+        background-color: #fff;
+        transition: all 0.6s;
+    }
+    .navSidebarSubApp .nav-item .nav-link{
+        text-decoration: none;
+        font-size: 0.90rem;
+        color: var(--neutral-colors-600);
+    }
 </style>
 
 <script is:inline>
     const toggleSidebar = document.querySelector('[data-toggle="sidebar"]')
-    const wrapperNavSidebarSubApp = document.querySelector('.wrapperNavSidebarSubApp')
+    const sidebarApp = document.querySelector('.sidebarApp')
+    const navSidebarSubApp = document.querySelector('.navSidebarSubApp')
 
     toggleSidebar.addEventListener('click', function (){
         (this).classList.toggle('rotate')
-        wrapperNavSidebarSubApp.classList.toggle('show')
+        sidebarApp.classList.toggle('show')
+        navSidebarSubApp.classList.toggle('d-flex')
     })
 </script>
