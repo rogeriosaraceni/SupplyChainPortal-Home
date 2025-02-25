@@ -4,88 +4,130 @@
         role="button"
         data-bs-toggle="dropdown"
         aria-expanded="false"
+        data-btn="language"
     >
         <img src="/assets/images/navbar/language.svg" />
-        <span class="text-nav-link">English</span>
+        <span class="text-nav-link" data-value="language">English</span>
     </button>
 
     <ul class="dropdown-menu-language dropdown-menu dropdown-menu-animation dropdown-menu-end shadow">
-        <li class="language checked">
+        <li class="language">
             <label>
                 <span>English</span>
-                <input type="radio" name="language" value="English" checked>
+                <input type="radio" name="language" value="English" data-item="language" checked>
                 <i class="bi bi-check icon"></i>
             </label>
         </li>
         <li class="language">
             <label>
                 <span>中文</span>
-                <input type="radio" name="language" value="中文">
+                <input type="radio" name="language" value="中文" data-item="language">
                 <i class="bi bi-check icon"></i>
             </label>
         </li>
         <li class="language">
             <label>
                 <span>Nederlands</span>
-                <input type="radio" name="language" value="Nederlands">
+                <input type="radio" name="language" value="Nederlands" data-item="language">
                 <i class="bi bi-check icon"></i>
             </label>
         </li>
         <li class="language">
             <label>
                 <span>Français</span>
-                <input type="radio" name="language" value="Français">
+                <input type="radio" name="language" value="Français" data-item="language">
                 <i class="bi bi-check icon"></i>
             </label>
         </li>
         <li class="language">
             <label>
                 <span>Deutsche</span>
-                <input type="radio" name="language" value="Deutsche">
+                <input type="radio" name="language" value="Deutsche" data-item="language">
                 <i class="bi bi-check icon"></i>
             </label>
         </li>
         <li class="language">
             <label>
                 <span>한국어</span>
-                <input type="radio" name="language" value="한국어">
+                <input type="radio" name="language" value="한국어" data-item="language">
                 <i class="bi bi-check icon"></i>
             </label>
         </li>
         <li class="language">
             <label>
                 <span>Português</span>
-                <input type="radio" name="language" value="Português">
+                <input type="radio" name="language" value="Português" data-item="language">
                 <i class="bi bi-check icon"></i>
             </label>
         </li>
         <li class="language">
             <label>
                 <span>русский</span>
-                <input type="radio" name="language" value="русский">
+                <input type="radio" name="language" value="русский" data-item="language">
                 <i class="bi bi-check icon"></i>
             </label>
         </li>
         <li class="language">
             <label>
                 <span>Español</span>
-                <input type="radio" name="language" value="Español">
+                <input type="radio" name="language" value="Español" data-item="language">
                 <i class="bi bi-check icon"></i>
             </label>
         </li>
         <li class="language">
             <label>
                 <span>Tiếng Việt</span>
-                <input type="radio" name="language" value="Tiếng Việt">
+                <input type="radio" name="language" value="Tiếng Việt" data-item="language">
                 <i class="bi bi-check icon"></i>
             </label>
         </li>
         <li class="language">
             <label>
                 <span>українська</span>
-                <input type="radio" name="language" value="українська">
+                <input type="radio" name="language" value="українська" data-item="language">
                 <i class="bi bi-check icon"></i>
             </label>
         </li>
     </ul>
 </li>
+
+<script is:inline>
+    function initLanguageDropdown() {
+        const dropdownButton  = document.querySelector('[data-btn="language"]');
+        const languageChecked = document.querySelector('[data-value="language"]');
+        const dropdownItems   = document.querySelectorAll('.language input[type="radio"]');
+
+        if (!dropdownButton || dropdownItems.length === 0) return;
+
+        // Verifica qual input já está marcado ao carregar a página
+        dropdownItems.forEach(input => {
+            if (input.checked) {
+                const parentLi = input.closest('.language'); // Encontra a <li> do input
+                if (parentLi) {
+                    parentLi.classList.add("active");
+                    updateButton(input.value);
+                }
+            }
+
+            // Adiciona evento de clique para atualizar a seleção
+            input.addEventListener("change", function () {
+                dropdownItems.forEach(i => i.closest('.language').classList.remove("active"));
+                const parentLi = this.closest('.language');
+                if (parentLi) {
+                    parentLi.classList.add("active");
+                    updateButton(this.value);
+                }
+            });
+        });
+
+        function updateButton(value) {
+            if (languageChecked) {
+                languageChecked.textContent = value;
+            }
+        }
+    }
+
+    document.addEventListener("DOMContentLoaded", initLanguageDropdown);
+</script>
+
+
