@@ -119,10 +119,10 @@ navbarApp
     display: none;
     font-size: 1.3rem;
 }
-.dropdown-menu-language li.language.checked label .icon{
+.dropdown-menu-language li.language.active label .icon{
     display: block;
 }
-.dropdown-menu-language li.language.checked{
+.dropdown-menu-language li.language.active{
     display: block;
     font-weight: 600;
 }
