@@ -9,22 +9,22 @@
     width: var(--sidebar-width);
     height: calc(100vh - var(--navbar-height));
     background-color: #fff;
-    /* box-shadow: var(--bs-box-shadow) !important; */
     transition: all 0.3s;
-
     border-right: 1px solid var(--bs-border-color);
 }
 .contentSidebarApp {
     padding-bottom: 7rem;
     height: 100vh;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 /* --------------------------------------------------------------------
 * - navSidebarApp (nav icons)
 ---------------------------------------------------------------------- */
 .navSidebarApp {
+    overflow: auto;
     flex-direction: column;
+    flex-wrap: nowrap;
     gap: 1rem;
     padding: 3rem 0rem 1rem 0rem;
 }
@@ -81,8 +81,9 @@
     border-right: 1px solid var(--bs-border-color);
 
 
-    overflow: hidden;
+    overflow: auto;
     flex-direction: column;
+    flex-wrap: nowrap;
     gap: 0.5rem;
     padding: 3.5rem 0.5rem;
 }

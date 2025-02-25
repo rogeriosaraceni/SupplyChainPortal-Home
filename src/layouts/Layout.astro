@@ -1,5 +1,6 @@
 ---
 import Head from '@includes/head.astro'
+import Loader from "@components/loader.astro"
 ---
 
 <!doctype html>
@@ -8,6 +9,7 @@ import Head from '@includes/head.astro'
     <Head />
 
 	<body>
+        <Loader />
         <slot />
 	</body>
 </html>
