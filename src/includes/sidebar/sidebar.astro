@@ -1,15 +1,115 @@
-<aside class="sidebarApp">Sidebar</aside>
+<aside class="sidebarApp">
+    <section class="contentSidebarApp ps">
+        <ul class="nav navSidebarApp">
+            <li class="nav-item">
+                <a class="nav-item active" href="/">
+                    <span class="icon">
+                        <img src="/assets/images/icons/sidebar/home.svg">
+                    </span>
+                    <span class="name">Home</span>
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-item" href="">
+                    <span class="icon">
+                        <img src="/assets/images/icons/sidebar/assessments.svg">
+                    </span>
+                    <span class="name">Assessments</span>
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-item" href="">
+                    <span class="icon">
+                        <img src="/assets/images/icons/sidebar/excellence.svg">
+                    </span>
+                    <span class="name">Excellence Programs Results</span>
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-item" href="">
+                    <span class="icon">
+                        <img src="/assets/images/icons/sidebar/dvpo.svg">
+                    </span>
+                    <span class="name">DVPO</span>
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-item" href="">
+                    <span class="icon">
+                        <img src="/assets/images/icons/sidebar/vpodocs.svg">
+                    </span>
+                    <span class="name">VPO Docs</span>
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-item" href="">
+                    <span class="icon">
+                        <img src="/assets/images/icons/sidebar/links.svg">
+                    </span>
+                    <span class="name">Links</span>
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-item" href="">
+                    <span class="icon">
+                        <img src="/assets/images/icons/sidebar/settings.svg">
+                    </span>
+                    <span class="name">Settings</span>
+                </a>
+            </li>
+        </ul>
+    </section>
+</aside>
 
 <style is:global>
     .sidebarApp {
         position: fixed;
         top: var(--navbar-height);
         left: 0;
-        padding: 1rem;
         width: var(--sidebar-width);
         height: calc(100vh - var(--navbar-height));
         overflow: hidden;
-        background-color: #ffc629;
+        background-color: #fff;
+        box-shadow: var(--bs-box-shadow) !important;
+    }
+    .contentSidebarApp {
+        position: sticky;
+        top: 0;
+        left: 0;
+        padding-bottom: 7rem;
+        height: 100vh;
+    }
+    .navSidebarApp {
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1rem 0.5rem 1rem 0.5rem;
+    }
+    .navSidebarApp .nav-item{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        text-decoration: none;
+        font-size: 0.75rem;
+        color: var(--neutral-colors-600);
+    }
+    .navSidebarApp .nav-item .icon{
+        padding: 0.5rem;
+        border-radius: 4px;
+        transition: all 0.3s;
+        background-color: transparent;
+    }
+    .navSidebarApp .nav-item:hover .icon{
+        background-color: var(--action-colors-defaul);
+    }
+    .navSidebarApp .nav-item .active .icon{
+        background-color: var(--action-colors-defaul);
     }
 </style>
 
