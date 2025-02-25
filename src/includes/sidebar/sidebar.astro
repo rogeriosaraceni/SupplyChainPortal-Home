@@ -43,6 +43,9 @@ import ContentNavSidebarSubApp from './_content-navSidebarSubApp.astro'
         event.preventDefault();
 
         let attr = $(this).data('link');
+        $('[data-link]').removeClass('activeOpenSubMenu');
+        $(this).toggleClass('activeOpenSubMenu')
+
         let ul = $(`[data-ul="${attr}"]`);
         if (ul.length === 0) return;
 

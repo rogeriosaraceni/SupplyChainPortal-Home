@@ -50,12 +50,15 @@
     transition: all 0.3s;
     background-color: transparent;
 }
-.navSidebarApp .nav-item:hover .icon{
-    background-color: var(--action-colors-defaul);
-}
+.navSidebarApp .nav-item:hover .icon,
 .navSidebarApp .nav-item .active .icon{
     background-color: var(--action-colors-defaul);
 }
+
+.navSidebarApp .nav-item .activeOpenSubMenu .icon{
+    background-color: #c4cfce;
+}
+
 .navSidebarApp .nav-item .name{
     width: calc(var(--sidebar-width) - 5px);
     line-height: 1.1;
@@ -63,6 +66,7 @@
     color: var(--neutral-colors-600);
     overflow: hidden;
 }
+
 
 /* --------------------------------------------------------------------
 * - navSidebarSubApp (nav expanse)
