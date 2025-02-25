@@ -1,19 +1,9 @@
 /* --------------------------------------------------------------------
-
+.contentHome
 ---------------------------------------------------------------------- */
 .contentHome{
     width: 100%;
     max-width: 80%;
-}
-@media(max-width: 1370px){
-    .contentHome{
-        max-width: 90%;
-    }
-}
-@media(max-width: 1200px){
-    .contentHome{
-        max-width: 100%;
-    }
 }
 
 /* --------------------------------------------------------------------
@@ -56,12 +46,6 @@ grid-banner-links
     grid-template-rows: 1fr;
     gap: 1rem;
 }
-@media(max-width: 992px) {
-    .grid-banner-links{
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr;
-    }
-}
 
 /* --------------------------------------------------------------------
 splide-banner
@@ -73,7 +57,9 @@ splide-banner
 }
 
 #splide-banner .splide__slide .img1{
+    width: 100%;
     max-width: 360px;
+    height: auto;
 }
 
 #splide-banner .splide__slide .bar{
@@ -153,3 +139,36 @@ Main Activities
 #splide-activities .splide__slide.item a:hover {
     background-color: var(--action-colors-defaul);
 }
+
+/* --------------------------------------------------------------------
+Media
+---------------------------------------------------------------------- */
+@media(max-width: 1370px){
+    .contentHome{
+        max-width: 90%;
+    }
+}
+@media(max-width: 1200px){
+    .contentHome{
+        max-width: 100%;
+    }
+}
+
+@media(max-width: 992px) {
+    .grid-banner-links{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+
+    #splide-banner .splide__slide .img1{
+        max-width: 300px;
+    }
+}
+
+@media(max-width: 768px) {
+    #splide-banner .splide__slide .img1{
+        display: none;
+    }
+}
+
+
