@@ -15,14 +15,14 @@
 .contentSidebarApp {
     padding-bottom: 7rem;
     height: 100vh;
-    overflow: auto;
+    /* overflow: hidden; */
 }
 
 /* --------------------------------------------------------------------
 * - navSidebarApp (nav icons)
 ---------------------------------------------------------------------- */
 .navSidebarApp {
-    overflow-x: hidden;
+    overflow: auto;
     flex-direction: column;
     flex-wrap: nowrap;
     gap: 1rem;
@@ -91,6 +91,7 @@
     left: var(--sidebar-width);
 }
 
+
 .navSidebarSubApp .nav-item .nav-link{
     padding: 0.25rem 1rem;
     text-decoration: none;
@@ -99,14 +100,6 @@
 }
 .navSidebarSubApp .nav-item .nav-link:hover{
     background-color: var(--action-colors-defaul);
-}
-
-.navSidebarSubApp .scroll-nav{
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    overflow-y: auto;
-    max-height: 300px;
 }
 
 /* --------------------------------------------------------------------
