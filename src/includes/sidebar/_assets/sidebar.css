@@ -114,16 +114,10 @@
     z-index: 10;
     position: absolute;
     top: 0.7rem;
-    right: -0.8rem;
+    right: 1rem;
     display: block;
     width: 30px;
     height: 30px;
     padding: 0.1rem 0.5rem;
     background-color: #fff;
-}
-.btn-toggle-sidebar .icon{
-    transition: all 0.3s;
-}
-.btn-toggle-sidebar.rotate .icon{
-    transform: rotate(-180deg);
 }

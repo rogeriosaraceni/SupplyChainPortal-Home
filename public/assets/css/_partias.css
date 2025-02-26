@@ -1,6 +1,6 @@
 :root{
     --sidebar-width: 84px;
-    --navbar-height: 64px;
+    --navbar-height: 48px;
 }
 
 /* --------------------------------------------------------------------
@@ -9,12 +9,11 @@ wrapperMainApp / mainContentApp
 .wrapperMainApp{
     display: flex;
     flex-direction: column;
-    padding-top: 1rem;
+    padding-top: calc(var(--navbar-height) + 1.5rem);
     height: 100vh;
     margin-left: var(--sidebar-width);
 }
 .mainContentApp {
-    margin-top: var(--navbar-height);
     padding: 20px;
     flex: 1;
 }
@@ -23,7 +22,7 @@ wrapperMainApp / mainContentApp
 footerApp
 ---------------------------------------------------------------------- */
 .footerApp {
-    padding: 1rem;
+    padding: 0.3rem 1rem;
     text-align: center;
     border-top: 1px solid #e9e9e9;
     background-color: #fff;

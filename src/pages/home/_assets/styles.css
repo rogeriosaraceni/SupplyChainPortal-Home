@@ -12,6 +12,7 @@ breadcrumb
 .breadcrumb{
     gap: 0.75rem;
     align-items: center;
+    margin-bottom: 0.5rem;
 }
 .breadcrumb .icon{
     font-size: 0.75rem;
@@ -23,7 +24,7 @@ info-user
 .info-user{
     display: flex;
     flex-direction: column;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
 }
 .info-user .name{
     font-size: 1.5rem;
@@ -125,7 +126,7 @@ Main Activities
     padding: 0 2rem;
 }
 #splide-activities .splide__slide.item {
-    height: 184px;
+    height: 160px;
 }
 #splide-activities .splide__slide.item a {
     display: flex;
