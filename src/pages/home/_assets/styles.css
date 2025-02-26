@@ -35,7 +35,7 @@ info-user
     color: var(--neutral-colors-400);
 }
 .info-user .email{
-    color: var(--neutral-colors-300);
+    color: #a1a1a1;
 }
 
 /* --------------------------------------------------------------------
