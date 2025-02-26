@@ -9,12 +9,12 @@ wrapperMainApp / mainContentApp
 .wrapperMainApp{
     display: flex;
     flex-direction: column;
-    padding-top: calc(var(--navbar-height) + 1.5rem);
+    padding-top: var(--navbar-height);
     height: 100vh;
     margin-left: var(--sidebar-width);
 }
 .mainContentApp {
-    padding: 20px;
+    padding: 1rem;
     flex: 1;
 }
 
