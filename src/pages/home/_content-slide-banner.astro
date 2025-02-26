@@ -2,7 +2,7 @@
     <section class="splide splide-default" id="splide-banner">
         <div class="splide__track">
             <ul class="splide__list">
-                <li class="splide__slide">
+                <li class="splide__slide" data-splide-interval="5000">
                     <div class="d-flex flex-column justify-content-between h-100">
                         <div class="d-flex justify-content-between">
                             <div class="text">
@@ -27,7 +27,7 @@
                     </div>
                 </li>
 
-                <li class="splide__slide item">
+                <li class="splide__slide" data-splide-interval="5000">
                     <img src="/assets/images/home/carousel/img2.jpeg"/>
                 </li>
             </ul>
@@ -38,9 +38,12 @@
 <script is:inline>
     addEventListener("load", () => {
         new Splide("#splide-banner", {
+            autoplay: true,
             type: "loop",
             gap: "1rem",
             pagination : false,
+            pauseOnHover: true,
+            pauseOnFocus: true,
 
         }).mount();
     });
