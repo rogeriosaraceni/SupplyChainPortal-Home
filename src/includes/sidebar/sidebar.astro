@@ -49,13 +49,27 @@ import ContentNavSidebarSubApp from './_content-navSidebarSubApp.astro'
             // Alterna a visibilidade do submenu correspondente
             if (!isVisibleUL) {
                 ul.addClass('show')
-                $('[data-toggle="sidebar"]').addClass('rotate')
             }
             else {
                 ul.removeClass('show');
-                $('[data-toggle="sidebar"]').removeClass('rotate')
                 $('[data-link]').removeClass('activeOpenSubMenu')
             }
         })
+
+        $('.wrapperMainApp, .btn-toggle-sidebar').on('click', function() {
+            closeSidebar();
+        });
+
+        function closeSidebar() {
+            $('[data-link]').removeClass('activeOpenSubMenu')
+            $('.navSidebarSubApp').removeClass('show')
+
+            document.querySelectorAll('[data-bs-toggle="tooltip"]').forEach(el => {
+                const tooltip = bootstrap.Tooltip.getInstance(el)
+                if (tooltip) {
+                    tooltip.hide()
+                }
+            })
+        }
     })
 </script>
